@@ -24,9 +24,12 @@ import java.util.List;
  ******/
 @Service
 public class UserService {
-    @Autowired
+    @Resource
     UserMapper userMapper;
     public List<User> list(){
+//        org.apache.ibatis.logging.LogFactory.useLog4JLogging();
+        List<User> byPhone = userMapper.findByPhone();
+        List<User> byPh1one = userMapper.findByPhone();
         return userMapper.findByPhone();
     }
 

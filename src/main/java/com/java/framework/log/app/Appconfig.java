@@ -43,6 +43,8 @@ public class Appconfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        sqlSessionFactoryBean.setConfiguration(configuration);
         sqlSessionFactoryBean.setDataSource(dataSource);
         return sqlSessionFactoryBean;
     }

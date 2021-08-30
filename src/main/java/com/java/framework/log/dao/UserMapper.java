@@ -1,8 +1,8 @@
 package com.java.framework.log.dao;
 
 import com.java.framework.log.entity.User;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -20,6 +20,7 @@ import java.util.List;
  * 2021/1/23   WangJiLin     Create the current class
  *************************************************************************
  ******/
+@CacheNamespace
 public interface UserMapper {
 
     /**

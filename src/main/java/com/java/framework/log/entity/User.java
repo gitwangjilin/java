@@ -1,5 +1,9 @@
 package com.java.framework.log.entity;
 
+import lombok.Data;
+
+import java.io.Serializable;
+
 /*************************************************************************
  ******
  * - Copyright (c) 2021 shangzhao.com
@@ -14,7 +18,8 @@ package com.java.framework.log.entity;
  * 2021/8/28   WangJiLin     Create the current class
  *************************************************************************
  ******/
-public class User {
+@Data
+public class User implements Serializable {
     /**
      * 唯一id
      */
@@ -56,4 +61,5 @@ public class User {
      * 到期时间
      */
     private String timeLimit;
+
 }
