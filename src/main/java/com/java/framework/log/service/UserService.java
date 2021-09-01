@@ -2,9 +2,10 @@ package com.java.framework.log.service;
 
 import com.java.framework.log.dao.UserMapper;
 import com.java.framework.log.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.List;
 
@@ -23,15 +24,24 @@ import java.util.List;
  *************************************************************************
  ******/
 @Service
-public class UserService {
+public class UserService implements InitializingBean {
     @Resource
     UserMapper userMapper;
-    public List<User> list(){
+
+    public List<User> list() {
 //        org.apache.ibatis.logging.LogFactory.useLog4JLogging();
-        List<User> byPhone = userMapper.findByPhone();
-        List<User> byPh1one = userMapper.findByPhone();
+        System.out.println(userMapper.findByPhone());
+        System.out.println(userMapper.findByPhone());
         return userMapper.findByPhone();
     }
 
+    @PostConstruct
+    public void init() {
+        System.out.println("==========");
+    }
 
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("1111111111111111111");
+    }
 }

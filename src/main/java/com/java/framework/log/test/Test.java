@@ -2,6 +2,7 @@ package com.java.framework.log.test;
 
 import com.java.framework.log.app.Appconfig;
 import com.java.framework.log.service.UserService;
+import org.apache.ibatis.session.Configuration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /*************************************************************************
