@@ -3,7 +3,6 @@ package com.java.framework.aop.test;
 import com.java.framework.aop.app.AppConfig;
 import com.java.framework.aop.service.OrderServiceImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ConfigurationClassPostProcessor;
 
 /*************************************************************************
  ******
