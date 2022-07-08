@@ -4,11 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>mymvc</module>
-        <module>mvc2</module>
         <module>designpattern</module>
         <module>juc</module>
-        <module>spring</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
